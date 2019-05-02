@@ -28,22 +28,17 @@ def count_contestants_by_hometown(data, hometown)
   hashHolder = {}
   counter = 0
   data.collect do |season, ary|
-
     for i in 0...ary.length
       if ary[i]["hometown"] == hometown
         counter += 1
       end
     end
   end
-
     hashHolder = ary.find {|a| a["hometown"] == hometown}
     if hashHolder != nil
       counter += 1
     end
-    binding.pry
   end
-
-
   return counter
 end
 
