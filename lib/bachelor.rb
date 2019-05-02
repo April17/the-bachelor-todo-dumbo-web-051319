@@ -34,10 +34,6 @@ def count_contestants_by_hometown(data, hometown)
       end
     end
   end
-  hashHolder = ary.find {|a| a["hometown"] == hometown}
-    if hashHolder != nil
-      counter += 1
-    end
   return counter
 end
 
